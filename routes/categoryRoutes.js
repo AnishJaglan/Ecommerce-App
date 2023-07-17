@@ -1,4 +1,5 @@
 import express from "express";
+import { isAdmin, requireSignIn } from "./../middlewares/authMiddleware.js";
 import {
   categoryControlller,
   createCategoryController,
@@ -6,7 +7,6 @@ import {
   singleCategoryController,
   updateCategoryController,
 } from "./../controllers/categoryController.js";
-import { isAdmin,requireSignIn } from './../middlewares/authMiddlewares.js';
 
 const router = express.Router();
 
@@ -41,4 +41,4 @@ router.delete(
   deleteCategoryCOntroller
 );
 
-export default router
+export default router;
